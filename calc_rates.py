@@ -67,7 +67,10 @@ def import_codes(**kwargs):
     ti.xcom_push(key='results', value={"rate_date":rate_date, "value_":value_, "ingest_datetime":ingest_datetime })
 
 """
-Save rates in postgresql
+# Save rates in postgresql
+# Предварительно создается таблица в Postgres
+# CREATE TABLE rates (ingest_datetime timestamp, rate_date date,rate_base varchar(20), rate_target varchar(20), value_ numeric (23,5));
+
 """
 def insert_data(**kwargs):
     task_instance = kwargs['ti']
