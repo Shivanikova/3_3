@@ -9,8 +9,8 @@ http:/localhost:8080 с базовыми параметрами логина air
 
 ####  При создании volumes нижеуказанный Волюм закомментирован, таблица rates создавалась вручную в DBeaver после запуска контейнера
 volumes:
-      - db_vol:/var/lib/postgresql/data
-   #  - ./postgres/init_scripts/task1.sql:/docker-entrypoint-initdb.d/init.sql
+     
+      - ./postgres/init_scripts/task1.sql:/docker-entrypoint-initdb.d/init.sql
 
 #### Получившиеся результаты размещены в папке 'Результаты работы DAGa'
 
